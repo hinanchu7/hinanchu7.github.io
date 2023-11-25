@@ -1,0 +1,72 @@
+#start-game-container {
+    width: 300px;
+    margin-right: 20px;
+}
+
+#game-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#game-log-container {
+    align-self: flex-start;
+}
+
+#player-stats-container {
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#player-inventory-container {
+    margin-right: 20px;
+    width: 200px;
+}
+
+#main-game-container {
+    width: 400px;
+    margin-right: 20px;
+}
+
+#player-weapon, #player-armor, #player-accessory, #player-health, #player-sanity, #player-fatigue{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.player-stats-info {
+    padding-top: 1.8px;
+}
+
+#log {
+    background-color: white;
+    border: 1px solid grey;
+    height: 400px;
+    position: relative;
+}
+
+#button1 {
+    margin-top: 10px;
+}
+
+#button1, #button2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#input {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+}
+
+#input-box {
+    border-top: 1px solid black;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    width:360px;
+    border-radius: 0px;
+}

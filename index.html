@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试版</title>
+    <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-game-container" class="window active">
+            <div class="title-bar">
+                <div class="title-bar-text">A window with contents</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <ul role="menubar" class="can-hover">
+                <li role="menuitem" tabindex="0" aria-haspopup="true">
+                    游戏
+                    <ul role="menu">
+                        <li role="menuitem">
+                            <a href="#menubar">
+                                开始新游戏
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#menubar">
+                                载入存档
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li role="menuitem" tabindex="0" aria-haspopup="true">
+                    关于
+                    <ul role="menu">
+                        <li role="menuitem"><a href="#menubar">联系作者</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="window-body has-space">
+                <p>There's so much room for activities!</p>
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field" id="gameTime">Press F1 for help</p>
+            </div>
+        </div>
+        <div id="player-stats-and-inventory-container">
+            <div id="player-stats-container" class="window active">
+                <div class="title-bar">
+                    <div class="title-bar-text">属性</div>
+                </div>
+                <div class="window-body has-space">
+                    <div id="player-health">
+                        <div class="player-stats-info">健康</div>
+                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+                            <div style="width: 140px"></div>
+                        </div>
+                    </div>
+                    <div id="player-sanity">
+                        <div class="player-stats-info">理智</div>
+                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+                            <div style="width: 140px"></div>
+                        </div>
+                    </div>
+                    <div id="player-fatigue">
+                        <div class="player-stats-info">疲劳</div>
+                        <div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+                            <div style="width: 140px"></div>
+                        </div>
+                    </div>
+                    <div id="equipment-container">
+                        <div id="player-weapon">
+                            <div class="player-stats-info">武器</div>
+                            <div class="player-stats-selection">
+                                <select>
+                                    <option selected>无</option>
+                                    <option>4 - Great!</option>
+                                    <option>3 - Pretty good</option>
+                                    <option>2 - Not so great</option>
+                                    <option>1 - Unfortunate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="player-armor">
+                            <div class="player-stats-info">防具</div>
+                            <div class="player-stats-selection">
+                                <select>
+                                    <option selected>无</option>
+                                    <option>4 - Great!</option>
+                                    <option>3 - Pretty good</option>
+                                    <option>2 - Not so great</option>
+                                    <option>1 - Unfortunate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="player-accessory">
+                            <div class="player-stats-info">特殊道具</div>
+                            <div class="player-stats-selection">
+                                <select>
+                                    <option selected>无</option>
+                                    <option>4 - Great!</option>
+                                    <option>3 - Pretty good</option>
+                                    <option>2 - Not so great</option>
+                                    <option>1 - Unfortunate</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="player-inventory-container" class="window active">
+                <div class="title-bar">
+                    <div class="title-bar-text">背包</div>
+                </div>
+                </ul>
+                <div class="window-body has-space">
+                    <section class="tabs">
+                        <menu role="tablist" aria-label="Tabs Template">
+                            <button role="tab" aria-controls="tab-A" aria-selected="true">物品</button>
+                        </menu>
+                        <article role="tabpanel" id="tab-A">水 * 1</article>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="main-game-container" class="window active">
+            <div class="title-bar">
+                <div class="title-bar-text">你的房间：404室</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <ul role="menubar" class="can-hover">
+                <li role="menuitem" tabindex="0" aria-haspopup="true">
+                    游戏
+                    <ul role="menu">
+                        <li role="menuitem">
+                            <a href="#menubar">
+                                保存游戏
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="#menubar">
+                                载入游戏
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li role="menuitem" tabindex="0" aria-haspopup="true">
+                    关于
+                    <ul role="menu">
+                        <li role="menuitem"><a href="#menubar">关于作者</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="window-body has-space">
+                <div id="log-container">
+                    <div id="log">
+                        <div id="input">
+                            <input id="input-box" type="text" placeholder="在此输入你的游戏指令">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="status-bar">
+                <p class="status-bar-field" id="gameTime">13</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
